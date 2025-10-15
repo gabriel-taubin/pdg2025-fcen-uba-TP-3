@@ -1,6 +1,6 @@
 //------------------------------------------------------------------------
 //  Copyright (C) Gabriel Taubin
-//  Time-stamp: <2025-09-20 22:12:39 taubin>
+//  Time-stamp: <2025-10-14 15:45:15 taubin>
 //------------------------------------------------------------------------
 //
 // GuiGLWidget.cpp
@@ -154,7 +154,7 @@ SceneGraph* GuiGLWidget::getSceneGraph() {
 
 //////////////////////////////////////////////////////////////////////
 void GuiGLWidget::setSceneGraph(SceneGraph* pWrl, bool resetHomeView) {
-  cout << "void GuiGLWidget::setSceneGraph() {\n";
+  // cout << "void GuiGLWidget::setSceneGraph() {\n";
 
   // clear _shaderMap
   map<Shape*,VectorGuiGLShader*>::iterator i;
@@ -346,7 +346,7 @@ void GuiGLWidget::setSceneGraph(SceneGraph* pWrl, bool resetHomeView) {
       _vAngle = 10.0f;
       _bboxDiameter = 2.0f;
       if(pWrl->hasEmptyBBox()) {
-        cout << "  hasEmptyBBox\n";
+        // cout << "  hasEmptyBBox\n";
         _center.setX(0); _center.setY(0); _center.setZ(0);
       } else {
         Vec3f& bbCenter = pWrl->getBBoxCenter();
@@ -363,7 +363,7 @@ void GuiGLWidget::setSceneGraph(SceneGraph* pWrl, bool resetHomeView) {
 
   }
 
-  cout << "}\n";
+  // cout << "}\n";
 }
 
 //////////////////////////////////////////////////////////////////////

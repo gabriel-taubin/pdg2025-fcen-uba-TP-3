@@ -1,6 +1,6 @@
 //------------------------------------------------------------------------
 //  Copyright (C) Gabriel Taubin
-//  Time-stamp: <2025-08-07 19:55:23 taubin>
+//  Time-stamp: <2025-10-14 15:43:41 taubin>
 //------------------------------------------------------------------------
 //
 // GuiPanelGeneral.cpp
@@ -68,7 +68,7 @@ GuiPanelGeneral::~GuiPanelGeneral() {
 //////////////////////////////////////////////////////////////////////
 void GuiPanelGeneral::updateState() {
 
-  std::cout << "GuiPanelGeneral::updateState() {\n";
+  // std::cout << "GuiPanelGeneral::updateState() {\n";
 
   auto mainWindow = getApp()->getMainWindow();
   if(mainWindow) {
@@ -174,7 +174,7 @@ void GuiPanelGeneral::updateState() {
       Node* points = wrl->find("POINTS"); // should be a Shape node
       bool  hasPoints = (points!=(Node*)0 && points->isShape());
            
-      std::cout << "  hasPoints = "<< ((hasPoints)?"true":"false") <<"\n";
+      // std::cout << "  hasPoints = "<< ((hasPoints)?"true":"false") <<"\n";
 
       if(hasPoints) {
         editPointsStatus->setText("SCENE GRAPH HAS A \"POINTS\" NODE");
@@ -193,12 +193,12 @@ void GuiPanelGeneral::updateState() {
           hasPointNormals = (ifs->getNormalBinding()==IndexedFaceSet::PB_PER_VERTEX);
           hasPointColors  = (ifs->getColorBinding() ==IndexedFaceSet::PB_PER_VERTEX);
 
-          std::cout << "  hasPointsNormals = "
-                    << ((hasPointNormals)?"true":"false") <<"\n";
-          std::cout << "  hasPointsColors  = "
-                    << ((hasPointColors)?"true":"false") <<"\n";
-        
-          ifs->printInfo("  ");
+          // std::cout << "  hasPointsNormals = "
+          //           << ((hasPointNormals)?"true":"false") <<"\n";
+          // std::cout << "  hasPointsColors  = "
+          //           << ((hasPointColors)?"true":"false") <<"\n";
+          // 
+          // ifs->printInfo("  ");
         }
 
         checkBoxPointsHasNormals->setChecked(hasPointNormals);
@@ -270,7 +270,7 @@ void GuiPanelGeneral::updateState() {
 
     }
   }
-  std::cout << "}\n";
+  // std::cout << "}\n";
 }
 
 //////////////////////////////////////////////////////////////////////
@@ -375,8 +375,10 @@ void GuiPanelGeneral::on_editHexGridScale_returnPressed() {
   auto mainWindow = getApp()->getMainWindow();
   GuiViewerData& data = mainWindow->getData();
   float scale = data.getBBoxScale();
-  QString str = "1.05"; // _editHexGridScale->text();
+  float scaleMin = data.getBBoxScaleMin();
+  QString str = editHexGridScale->text(); // "1.05";
   float value = str.toFloat();
+  if(value<scaleMin) value=scaleMin;  
   if(value!=scale) {
     data.setBBoxScale(value);
     SceneGraphProcessor processor(*(data.getSceneGraph()));

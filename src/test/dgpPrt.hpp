@@ -1,11 +1,11 @@
 //------------------------------------------------------------------------
 //  Copyright (C) Gabriel Taubin
-//  Time-stamp: <2025-08-05 23:18:07 taubin>
+//  Time-stamp: <2025-10-14 16:48:13 taubin>
 //------------------------------------------------------------------------
 //
 // dgpPrt.cpp
 //
-// Software developed for course
+// Software developed for the course
 // Digital Geometry Processing
 // Copyright (c) 2025, Gabriel Taubin
 // All rights reserved.

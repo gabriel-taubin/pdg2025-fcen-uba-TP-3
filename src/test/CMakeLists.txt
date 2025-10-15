@@ -1,5 +1,3 @@
-cmake_minimum_required(VERSION 3.3)
-
 # list of source files
 set(dgpTest3_files dgpTest3.cpp dgpPrt.cpp)
 

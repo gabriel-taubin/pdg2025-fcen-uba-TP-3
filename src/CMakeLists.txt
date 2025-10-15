@@ -1,4 +1,6 @@
-cmake_minimum_required(VERSION 3.3)
+cmake_minimum_required(VERSION 4.0)
+
+set(CMAKE_OSX_DEPLOYMENT_TARGET "15")
 
 project(dgp2025)
 
@@ -10,7 +12,8 @@ set(CMAKE_INCLUDE_CURRENT_DIR ON)
 set(CMAKE_INSTALL_PREFIX
     ${PROJECT_SOURCE_DIR}/..
     CACHE PATH "Project bin directory" FORCE)
-# you can comment the following line
+
+  # you can comment the following line
 # message("CMAKE_INSTALL_PREFIX = ${CMAKE_INSTALL_PREFIX}")
 
 # you can comment the following line

@@ -1,6 +1,6 @@
 //------------------------------------------------------------------------
 //  Copyright (C) Gabriel Taubin
-//  Time-stamp: <2025-09-27 01:00:38 taubin>
+//  Time-stamp: <2025-10-14 16:24:10 taubin>
 //------------------------------------------------------------------------
 //
 // GuiMainWindow.cpp
@@ -84,10 +84,10 @@ bool GuiMainWindow::registerPanelFactory
 }
 
 GuiPanel* GuiMainWindow::getCurrentPanel() {
-  QString name = _panelCombo->currentText();
-  std::cout << "GuiMainWindow::getCurrentPanel() {\n";
-  std::cout << "  name = \"" << qPrintable(name) << "\" \n";
-  std::cout << "}\n";
+  // QString name = _panelCombo->currentText();
+  // std::cout << "GuiMainWindow::getCurrentPanel() {\n";
+  // std::cout << "  name = \"" << qPrintable(name) << "\" \n";
+  // std::cout << "}\n";
   // return (GuiPanel*)0;
   return _currentPanel;
 }
@@ -153,7 +153,7 @@ GuiMainWindow::GuiMainWindow():
 {
 
   setWindowIcon(QIcon("qt.icns"));
-  setWindowTitle(QString("DGP2025-A3 | Student : %1").arg(STUDENT_NAME));
+  setWindowTitle(QString("DGP2025-S3 | SOLUTION by %1").arg(STUDENT_NAME));
   
   LoaderWrl* wrlLoader = new LoaderWrl();
   _loader.registerLoader(wrlLoader);

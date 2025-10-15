@@ -1,6 +1,6 @@
 //------------------------------------------------------------------------
 //  Copyright (C) Gabriel Taubin
-//  Time-stamp: <2025-09-26 22:20:04 taubin>
+//  Time-stamp: <2025-10-14 16:48:13 taubin>
 //------------------------------------------------------------------------
 //
 // SceneGraphProcessor.hpp
@@ -116,6 +116,7 @@ private:
   int         _createPartition
               (Vec3f& min, Vec3f& max, int depth, vector<float>&coord);
   void        _deletePartition();
+
   void        _applyToIndexedFaceSet(IndexedFaceSet::Operator p);
 
   // IndexedFaceSet::Operator

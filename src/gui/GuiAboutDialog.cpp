@@ -1,6 +1,6 @@
 //------------------------------------------------------------------------
 //  Copyright (C) Gabriel Taubin
-//  Time-stamp: <2025-09-27 00:59:37 taubin>
+//  Time-stamp: <2025-09-26 22:30:48 taubin>
 //------------------------------------------------------------------------
 //
 // GuiAboutDialog.cpp
@@ -111,9 +111,9 @@ GuiAboutDialog::GuiAboutDialog(QWidget * parent):
   verticalLayout->addWidget(close_button);
 
   setWindowTitle
-   (QApplication::translate("AboutDialog", "DGP2025-A3", 0));
+   (QApplication::translate("AboutDialog", "DGP2025-S3", 0));
   title_label->setText
-   (QApplication::translate("AboutDialog", "DGP2025-A3", 0));
+   (QApplication::translate("AboutDialog", "DGP2025-S3", 0));
   qt_version_title_label->setText
    (QApplication::translate("AboutDialog", "Qt Version:", 0));
   qt_version_label->setText(QApplication::translate

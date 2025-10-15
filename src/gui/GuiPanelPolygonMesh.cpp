@@ -1,6 +1,6 @@
 //------------------------------------------------------------------------
 //  Copyright (C) Gabriel Taubin
-//  Time-stamp: <2025-08-07 19:55:25 taubin>
+//  Time-stamp: <2025-10-14 16:24:09 taubin>
 //------------------------------------------------------------------------
 //
 // GuiPanelPolygonMesh.cpp
@@ -199,7 +199,7 @@ void GuiPanelPolygonMesh::_updateComboShape
 //////////////////////////////////////////////////////////////////////
 void GuiPanelPolygonMesh::updateState() {
 
-  std::cout << "GuiPanelPolygonMesh::updateState() {\n";
+  // std::cout << "GuiPanelPolygonMesh::updateState() {\n";
 
   auto mainWindow = getApp()->getMainWindow();
   if(mainWindow) {
@@ -225,7 +225,7 @@ void GuiPanelPolygonMesh::updateState() {
     }
 
   }
-  std::cout << "}\n";
+  // std::cout << "}\n";
 }
 
 //////////////////////////////////////////////////////////////////////

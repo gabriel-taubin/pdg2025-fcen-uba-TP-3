@@ -1,6 +1,6 @@
 //------------------------------------------------------------------------
 //  Copyright (C) Gabriel Taubin
-//  Time-stamp: <2025-08-07 19:55:27 taubin>
+//  Time-stamp: <2025-10-14 16:24:09 taubin>
 //------------------------------------------------------------------------
 //
 // GuiPanelRendering.cpp
@@ -112,8 +112,8 @@ void GuiPanelRendering::_setCheckBoxRowColor
 //////////////////////////////////////////////////////////////////////
 GuiPanelRendering::~GuiPanelRendering() {
   static int indx = 0;
-  std::cout << "GuiPanelRendering::~GuiPanelRendering("<<(indx++)<<") {\n";
-  std::cout << "}\n";
+  // std::cout << "GuiPanelRendering::~GuiPanelRendering("<<(indx++)<<") {\n";
+  // std::cout << "}\n";
 }
 
 //////////////////////////////////////////////////////////////////////
@@ -142,7 +142,7 @@ QRgb GuiPanelRendering::_selectColor
 // overrides pure virtual GuiPanel::updateState()
 
 void GuiPanelRendering::updateState() {
-  std::cout << "GuiPanelRendering::updateState() {\n";
+  // std::cout << "GuiPanelRendering::updateState() {\n";
 
   GuiMainWindow* mainWin   = getApp()->getMainWindow();
   GuiViewerData& data      = mainWin->getData();
@@ -216,7 +216,7 @@ void GuiPanelRendering::updateState() {
 
   if(stateHasChanged) mainWin->resetSceneGraph();
 
-  std::cout << "}\n";
+  // std::cout << "}\n";
 }
 
 //////////////////////////////////////////////////////////////////////

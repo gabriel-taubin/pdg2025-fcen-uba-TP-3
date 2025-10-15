@@ -1,6 +1,6 @@
 //------------------------------------------------------------------------
 //  Copyright (C) Gabriel Taubin
-//  Time-stamp: <2025-08-05 23:35:13 taubin>
+//  Time-stamp: <2025-10-14 16:24:09 taubin>
 //------------------------------------------------------------------------
 //
 // GuiPanelTemplate.cpp
@@ -74,12 +74,12 @@ GuiPanelTemplate::~GuiPanelTemplate() {
 // overrides pure virtual GuiPanel::updateState()
 
 void GuiPanelTemplate::updateState() {
-  std::cout << "GuiPanelTemplate::updateState() {\n";
+  // std::cout << "GuiPanelTemplate::updateState() {\n";
 
   // auto _mainWindow = getApp()->getMainWindow();
   // GuiViewerData& data  = _mainWindow->getData();
 
-  std::cout << "}\n";
+  // std::cout << "}\n";
 }
 
 

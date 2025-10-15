@@ -1,6 +1,6 @@
 //------------------------------------------------------------------------
 //  Copyright (C) Gabriel Taubin
-//  Time-stamp: <2025-08-07 19:55:32 taubin>
+//  Time-stamp: <2025-10-14 15:42:27 taubin>
 //------------------------------------------------------------------------
 //
 // GuiViewerData.cpp
@@ -166,6 +166,7 @@ GuiViewerData::GuiViewerData():
   _bboxCube(true),
   _bboxOccupied(false),
   _bboxScale(1.05f),
+  _bboxScaleMin(1.01f),
   _vColor(0xff004000),
   // _eColor(0xffff7f00),
   _eColor(0xff805000),

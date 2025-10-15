@@ -1,6 +1,6 @@
 //------------------------------------------------------------------------
 //  Copyright (C) Gabriel Taubin
-//  Time-stamp: <2025-08-07 19:55:33 taubin>
+//  Time-stamp: <2025-10-14 15:41:31 taubin>
 //------------------------------------------------------------------------
 //
 // GuiViewerData.hpp
@@ -45,8 +45,8 @@ public:
               ~GuiViewerData();
 
   void         setSceneGraph(SceneGraph* pWrl);
-
   SceneGraph*  getSceneGraph()             { return _pWrl;                         }
+
   int          getBBoxDepth()              { return _bboxDepth;                    }
   void         setBBoxDepth(int d)         { _bboxDepth = (d<0)?0:(d>10)?10:d;     }
   bool         getBBoxCube()               { return _bboxCube;                     }
@@ -55,9 +55,14 @@ public:
   void         setBBoxOccupied(bool value) { _bboxOccupied = value;                }
   float        getBBoxScale()              { return   _bboxScale;                  }
   void         setBBoxScale(float scale)   { _bboxScale = (scale<0.0f)?0.0f:scale; }
+  float        getBBoxScaleMin()
+  { return   _bboxScaleMin;                  }
+  void         setBBoxScaleMin(float scaleMin)
+  { _bboxScaleMin = (scaleMin<1.01f)?1.01f:scaleMin; }
 
   Vec4f&       getPlane()                  { return _plane;                        }
   void         setPlane(Vec4f& f)          { _plane = f;                           }
+
   vector<float>& getFunctionVertices()     { return _functionVertices;             }
   vector<float>& getFunctionCells()        { return _functionCells;                }
   
@@ -77,9 +82,6 @@ public:
 
   void         setVertexColor(const QRgb c)      { _vColor = c;                    }
   void         setEdgeColor(const QRgb c)        { _eColor = c;                    }
-  // void      setDepthEdgeColor(const QRgb c)   { _edColor = c;                   }
-  // void      setFaceCenterColor(const QRgb c)  { _fcColor = c;                   }
-  // void      setBackFaceColor(const QRgb c)    { _backFaceColor = c;             }
   void         setNormalColor(const QRgb c)      { _nColor = c;                    }
   void         setPolylineColor(const QRgb c)    { _plColor = c;                   }
   void         setForegroundColor(const QRgb c)  { _fgColor = c;                   }
@@ -90,9 +92,6 @@ public:
 
   QRgb         getVertexColor() const            { return _vColor;                 }
   QRgb         getEdgeColor() const              { return _eColor;                 }
-  // QRgb      getDepthEdgeColor() const         { return _edColor;                }
-  // QRgb      getFaceCenterColor() const        { return _fcColor;                }
-  // QRgb      getBackFaceColor() const          { return _backFaceColor;          }
   QRgb         getNormalColor() const            { return _nColor;                 }
   QRgb         getPolylineColor() const          { return _plColor;                }
   QRgb         getForegroundColor() const        { return _fgColor;                }
@@ -169,12 +168,10 @@ private:
   bool          _bboxCube;
   bool          _bboxOccupied;
   float         _bboxScale;
+  float         _bboxScaleMin;
 
   QRgb          _vColor;
   QRgb          _eColor;
-  // QRgb       _edColor;
-  // QRgb       _fcColor;
-  // QRgb       _backFaceColor;
   QRgb          _nColor;
   QRgb          _plColor;
   QRgb          _fgColor;

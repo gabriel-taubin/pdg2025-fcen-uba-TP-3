@@ -1,6 +1,6 @@
 //------------------------------------------------------------------------
 //  Copyright (C) Gabriel Taubin
-//  Time-stamp: <2025-08-07 19:55:28 taubin>
+//  Time-stamp: <2025-10-14 16:24:09 taubin>
 //------------------------------------------------------------------------
 //
 // GuiPanelSelection.cpp
@@ -341,7 +341,7 @@ GuiPanelSelection::~GuiPanelSelection() {
 // overrides pure virtual GuiPanel::updateState()
 
 void GuiPanelSelection::updateState() {
-  std::cout << "GuiPanelSelection::updateState() {\n";
+  // std::cout << "GuiPanelSelection::updateState() {\n";
   // auto _mainWindow = getApp()->getMainWindow();
   // GuiViewerData& data  = _mainWindow->getData();
   int sVIndex = spinSelectedVertexIndex->value();
@@ -350,7 +350,7 @@ void GuiPanelSelection::updateState() {
   on_spinSelectedEdgeIndex_valueChanged(sEIndex);
   int sFIndex = spinSelectedFaceIndex->value();
   on_spinSelectedFaceIndex_valueChanged(sFIndex);
-  std::cout << "}\n";
+  // std::cout << "}\n";
 }
 
 //////////////////////////////////////////////////////////////////////

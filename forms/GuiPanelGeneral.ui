@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
   <class>GuiPanelGeneral</class>
-  <widget class="QWidget" name="GuiPanelGeneral">
+  <widget class="QWidget" name="guiPanelGeneral">
 
-    <layout class="QVBoxLayout" name="generalVBoxLayout">
+    <layout class="QVBoxLayout" name="guiPanelGeneralVBoxLayout">
       <property name="leftMargin">
 	<number>0</number>
       </property>
@@ -751,7 +751,7 @@
 		  <set>Qt::AlignLeft|Qt::AlignVCenter</set>
 		</property>
 		<property name="text">
-		  <string>SIZE</string>
+		  <string>SCALE</string>
 		</property>
 		<property name="font">
 		  <font>
@@ -1198,7 +1198,7 @@
 		  <set>Qt::AlignLeft|Qt::AlignVCenter</set>
 		</property>
 		<property name="text">
-		  <string>NORMAL BINDING</string>
+		  <string>BINDING</string>
 		</property>
 		<property name="font">
 		  <font>

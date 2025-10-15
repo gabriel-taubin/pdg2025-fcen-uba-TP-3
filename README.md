@@ -1,13 +1,13 @@
 ** pdg2025-fcen-uba-TP-3 **
 ** 2025 Procesamiento de Geometría Digital (Digital Geometry Processing) **
 
-Tarea 3
+Trabajo Practico 3
 
-Los archivos están organizados como en la Tarea 2 y el proceso de
-compilación es el mismo.
+Los archivos están organizados como en el trabajo practico 2 y el
+proceso de compilación es el mismo.
 
 Antes de compilar la aplicación por primera vez, edite el archivo
-src/gui/GuiStrings.hpp o cópielo de la Tarea 1.
+src/gui/GuiStrings.hpp o cópielo del trabajo practico 1.
 
 Debe implementar los siguientes métodos nuevos, que se han añadido a las
 clases HalfEdges y PolygonMesh:
